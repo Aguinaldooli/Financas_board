@@ -1,0 +1,108 @@
+body {
+  font-family: "Arial", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f8f8f8; /* Fundo mais claro */
+}
+
+.App {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1200px; /* Largura máxima para melhor legibilidade */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.CadastroForm,
+.ReceitasColumn,
+.DespesasColumn {
+  width: calc(
+    33.33% - 20px
+  ); /* Ajusta a largura das colunas e adiciona espaçamento entre elas */
+  margin-right: 20px;
+}
+
+.ReceitasColumn,
+.DespesasColumn {
+  flex: 1; /* Distribui o espaço igualmente entre as colunas de receitas e despesas */
+}
+
+h2 {
+  color: #3498db; /* Cor azul */
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  color: #555; /* Cor cinza escuro para labels */
+}
+
+input,
+select,
+button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+select {
+  appearance: none;
+  background: #fff
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23555555' width='18px' height='18px'><path d='M7 10l5 5 5-5z'/></svg>")
+    no-repeat right 10px center;
+  background-size: 18px;
+}
+
+button {
+  background-color: #27ae60; /* Cor verde para o botão */
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #219653; /* Cor verde mais escura no hover */
+}
+
+/* Adicionando estilos para os cards */
+.card {
+  width: 100%;
+  background-color: #ffffff; /* Cor de fundo clara */
+  padding: 10px;
+  border-radius: 8px;
+  margin-top: 10px; /* Adicionando espaçamento entre os cards */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Adicionando sombra leve */
+}
+
+.card p {
+  margin: 5px 0; /* Adicionando espaçamento interno nos elementos de parágrafo dentro do card */
+}
+
+.card button {
+  background-color: #e74c3c; /* Cor de fundo vermelha para o botão de remover */
+  color: #fff; /* Cor do texto branca */
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.card button:hover {
+  background-color: #c0392b; /* Cor de fundo vermelha mais escura no hover */
+}
+
+#root {
+  position: relative;
+  z-index: 1;
+}
